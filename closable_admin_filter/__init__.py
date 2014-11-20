@@ -1,1 +1,1 @@
-from vyacheslav.mixins import AdminClosableFilterMixin
+from closable_admin_filter.mixins import AdminClosableFilterMixin

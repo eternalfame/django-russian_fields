@@ -1,0 +1,17 @@
+.module.filtered {
+    background: none!important;
+}
+
+#changelist-filter {
+    border: #ccc 1px solid;
+}
+
+#hide_filter {
+    padding: 12px;
+    display: block;
+    text-align: center;
+    background: #fff;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
