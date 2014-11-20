@@ -15,7 +15,7 @@ setup(
     license='MIT License',
     description='A simple Django app to add hide/show ability to the filter in Django admin.',
     long_description=README,
-#    url='http://www.example.com/',
+    url='https://github.com/eternalfame/django-closable_admin_filter',
     author='Vyacheslav Sukhenko',
     author_email='eternalfame@mail.ru',
     classifiers=[
