@@ -1,0 +1,1 @@
+from vyacheslav.mixins import AdminClosableFilterMixin
