@@ -1,28 +1,36 @@
 =====
-Closable Admin Filter
+Django Russian Fields
 =====
 
-When there are too many fields in Django admin and it's necessary to have the filter, it turns to very ugly situation, when filter `flies` over the fields.
+Приложение содержит поля, специфичные для разработки в российских условиях
+Список полей:
+INNField
+KPPField
+OGRNField
+PhoneNumberField
 
-So here's a simple Django app to provide a "HIDE" button for the filter.
-
-Quick start
+Инструкция
 -----------
 
-1. Install the package using::
+1. Установите пакет с помощью pip::
 
-    pip install django-closable_admin_filter
+    pip install django-russian_fields
 
-2. Add "closable_admin_filter" to your INSTALLED_APPS setting like this::
+2. Добавьте "russian_fields" в INSTALLED_APPS::
 
     INSTALLED_APPS = (
         ...
-        'closable_admin_filter',
+        'russian_fields',
     )
 
-3. Add the AdminClosableFilterMixin to your inherited from ModelAdmin class like this::
+3. Импортируйте нужное поле в ваш models.py::
 
-	class MyAdmin(AdminClosableFilterMixin, admin.ModelAdmin):
-		...
+    from russian_fields.models.fields import INNField
 
-4. Visit http://your.domain/admin/your_app/your_model/ to enjoy the result.
+4. Используйте импортированное поле в вашей модели::
+
+    class MyModel(models.Model):
+        ...
+	inn = INNField(verbose_name=u"ИНН")
+
+5. Радуйтесь!

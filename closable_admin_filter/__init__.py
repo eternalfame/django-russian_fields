@@ -1,1 +1,0 @@
-from closable_admin_filter.mixins import AdminClosableFilterMixin
