@@ -4,6 +4,7 @@ Django Russian Fields
 
 Приложение содержит поля, специфичные для разработки в российских условиях
 Список полей::
+
 * INNField
 * KPPField
 * OGRNField
