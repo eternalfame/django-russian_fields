@@ -49,7 +49,7 @@ def phone_validator(value):
     errors = []
     if re.findall('[a-zA-Zа-яА-я]', value, re.UNICODE):
         errors.append(u'Поле не должно содержать буквы')
-    if not re.match('^(\+7[\- ]?)(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{6,10}$', value, re.UNICODE) or not len(re.sub('\D', '', value)) == 11:
-        errors.append(u'Номер должен начинаться с +7 и содержать 11 цифр')
+    if not re.match('^((\+7|8)[\- ]?)(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{6,10}$', value, re.UNICODE) or not len(re.sub('\D', '', value)) == 11:
+        errors.append(u'Номер должен начинаться с +7 или 8 и содержать 11 цифр')
     if errors:
         raise ValidationError(errors)
